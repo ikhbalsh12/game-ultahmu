@@ -199,6 +199,8 @@ function initializeGallery() {
         <div class="photobox-controls">
             <button class="photo-btn">MULAI CETAK</button>
         </div>
+        document.querySelector('.photo-btn').addEventListener('click', showPhoto);
+
     `;
 
     setTimeout(() => {
