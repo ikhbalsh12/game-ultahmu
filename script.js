@@ -133,11 +133,19 @@ function startTypewriter() {
 
 Happy Birthday!
 
-Hari ini aku pengen kamu ngerasain semua hal positif dan keajaiban yang cuma bisa didapetin kalo kamu ada di dunia ini. Semoga segala keinginanmu tercapai, apalagi yang kocak-kocak dan gak biasa, karena kamu tuh unik banget! Aku selalu percaya kalau kamu bisa melewati semua tantangan dengan kekuatan dan semangat yang luar biasa.
+Sayang, selamat ulang tahun ya…
+Di dunia ini mungkin banyak orang yang kenal kamu,
+tapi cuma satu yang benar-benar sayang kamu sepenuh hati — aku.
 
-Terima kasih udah jadi bagian hidup aku yang paling berharga. Kamu bener-bener bikin hari-hari aku jadi lebih berarti dan penuh warna. Semoga di tahun yang baru ini, kamu makin bahagia, makin sukses, dan tentunya makin cantik (walaupun udah cantik banget sih!).
+Aku nggak butuh alasan buat tetap di sampingmu,
+cukup tahu kalau kamu ada, itu sudah cukup buat bahagiaku.
 
-I love you so much! 💕`;
+Semoga di hari spesialmu ini, kamu sadar…
+kalau cinta yang paling tulus itu sedang menatapmu sekarang —
+lewat kata-kata ini.
+
+Aku sayang kamu, bukan karena hari ini ulang tahunmu,
+tapi karena setiap detik bersamamu terasa seperti hadiah. 💖`;
 
     messageContent.innerHTML = '';
     let charIndex = 0;
