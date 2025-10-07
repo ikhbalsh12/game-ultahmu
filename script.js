@@ -210,40 +210,32 @@ function initializeGallery() {
 }
 
 function startPhotoShow() {
-    const photoBtn = document.querySelector('.photo-btn');
-    const photoDisplay = document.querySelector('.photo-display');
-    const progressDiv = document.querySelector('.photobox-progress');
+  const photoDisplay = document.querySelector('.photo-display');
+  if (!photoDisplay) return;
 
-    if (!photoBtn || !photoDisplay || !progressDiv) return;
+  const photos = [
+    { text: 'Our First Date 💞', image: './images/photo1.jpg' },
+    { text: 'Birthday Moment 🎂', image: './images/photo2.jpg' },
+    { text: 'Adventure Time 🌟', image: './images/photo3.jpg' },
+    { text: 'Cozy Together ❤️', image: './images/photo4.jpg' },
+    { text: 'Sweet Memories 🥰', image: './images/photo5.jpg' },
+    { text: 'Laugh Together 😂', image: './images/photo6.jpg' },
+    { text: 'Perfect Day ☀️', image: './images/photo7.jpg' },
+    { text: 'Love Forever 💖', image: './images/photo8.jpg' }
+  ];
 
-    const photos = [
-        { text: 'Our First Date 💕', image: './images/photo1.jpg' },
-        { text: 'Birthday Moment 🎂', image: './images/photo2.jpg' },
-        { text: 'Adventure Time 🌟', image: './images/photo3.jpg' },
-        { text: 'Cozy Together ❤️', image: './images/photo4.jpg' },
-        { text: 'Sweet Memories 🥰', image: './images/photo5.jpg' },
-        { text: 'Laugh Together 😂', image: './images/photo6.jpg' },
-        { text: 'Perfect Day ☀️', image: './images/photo7.jpg' },
-        { text: 'Love Forever 💖', image: './images/photo8.jpg' }
-    ];
-
-    photoBtn.textContent = 'MENCETAK...';
-    photoBtn.disabled = true;
-    progressDiv.textContent = 'INITIALIZING CAMERA...';
-
-    let framesHTML = '';
-    for (let i = 0; i < photos.length; i++) {
-        framesHTML += `
-            <div class="photo-frame" id="frame-${i + 1}">
-                <div class="photo-content">READY</div>
-            </div>
-        `;
-    }
-
-    const photoStripHTML = `
-        <div class="photo-strip">
-            <div class="photo-strip-header">PHOTOSTRIP SESSION</div>
-            <div class="photo-frames-container">${framesHTML}</div>
-            <div class="photo-strip-footer">💕 BIRTHDAY MEMORIES 💕</div>
-        </div>
-        <div
+  photoDisplay.innerHTML = `
+    <div class="photo-strip">
+      <div class="photo-strip-header">PHOTOSTRIP SESSION</div>
+      <div class="photo-frames-container">
+        ${photos.map((photo, i) => `
+          <div class="photo-frame" id="frame-${i + 1}">
+            <img src="${photo.image}" alt="${photo.text}" />
+            <div class="photo-caption">${photo.text}</div>
+          </div>
+        `).join('')}
+      </div>
+      <div class="photo-strip-footer">💕 BIRTHDAY MEMORIES 💕</div>
+    </div>
+  `;
+}
